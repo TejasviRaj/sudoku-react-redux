@@ -39,14 +39,6 @@ function App() {
       <Sudoku />
 
       </Route>
-      {/* <Route path = {process.env.PUBLIC_URL + '/MEDIUM'}>
-      <Sudoku />
-
-        </Route>
-        <Route path = {process.env.PUBLIC_URL + '/HARD'}>
-        <Sudoku />
-
-        </Route> */}
     </Switch>
     </React.Fragment>
   );

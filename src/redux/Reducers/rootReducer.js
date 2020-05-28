@@ -14,16 +14,11 @@ export default function rootReducer(state = initialState, action) {
             };
         case Actions.USER_INPUT:
             let newState = Object.assign({}, state);
-            console.log(action.updatedCell);
             mainLoop:
             for (let row of newState.board.rows) {
-                console.log(row);
                 for (let cell of row.cells) {
                     if (cell.columnNumber === action.updatedCell.columnNumber &&
                         cell.rowNumber === action.updatedCell.rowNumber && cell.isUserEditable) {
-                        console.log(cell.rowNumber);
-                        console.log(cell.columnNumber);
-                        console.log(cell.cellValue);
                         cell.cellValue = action.updatedCell.cellValue;
                         break mainLoop;
                     }
