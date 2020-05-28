@@ -7,22 +7,19 @@ import './Sudoku.css'
 
 function Sudoku(props) {
     let { difficulty } = useParams();
-    let {startNewGame} = props;
-
+    let {startNewGame, board} = props;
     useEffect(() => {
         startNewGame(difficulty);
     }, [startNewGame, difficulty]);
 
-    useEffect(() => {
-        console.log('hello');
-    });
+
 
     return (
         <div>
             <table className="sudokuGrid">
                 <tbody>
-                    {Object.keys(props.board).length &&
-                        props.board.rows.map((row, rowNum) => {
+                    {Object.keys(board).length &&
+                        board.rows.map((row, rowNum) => {
                             return (
                                 //used rowNum as key as items are not rearranged in this case. Here index is used as key even though it is considered antipattern because in this case the items are not rearranged.
                                 <ROW key={rowNum} row={row}></ROW>
@@ -31,6 +28,8 @@ function Sudoku(props) {
                         })
                     }
                 </tbody>
+                {/* <Result board={board}/> */}
+
             </table>
         </div>
     );

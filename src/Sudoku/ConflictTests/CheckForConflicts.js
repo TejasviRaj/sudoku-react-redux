@@ -3,8 +3,8 @@
 import checkItemRepeats from './CheckItemRepeats'
 
 export default function checkForConflicts(board) {
-    for (let row in board.rows) {
-        for (let cell in row.cells) {
+    for (let row of board.rows) {
+        for (let cell of row.cells) {
             cell.hasConflict = false;
         }
     }

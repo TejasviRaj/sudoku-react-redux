@@ -3,6 +3,8 @@
 import Actions from '../Actions/ActionTypes';
 import BoardFactory from '../../Sudoku/Board/BoardFactory';
 import checkForConflicts from '../../Sudoku/ConflictTests/CheckForConflicts';
+import cloneDeep from 'lodash.clonedeep';
+
 const initialState = {
     board: {}
 }
@@ -13,9 +15,7 @@ export default function rootReducer(state = initialState, action) {
                 board: BoardFactory(action.difficulty),
             };
         case Actions.USER_INPUT:
-            let newState = Object.assign({}, state);
-                        console.log(newState === state);
-
+            let newState = cloneDeep(state);
             mainLoop:
             for (let row of newState.board.rows) {
                 for (let cell of row.cells) {
@@ -26,9 +26,9 @@ export default function rootReducer(state = initialState, action) {
                     }
                 }
             }
+         
             checkForConflicts(newState.board);
-            console.log("newstate");
-            console.log(newState);
+
             return newState;
         default:
             return state;

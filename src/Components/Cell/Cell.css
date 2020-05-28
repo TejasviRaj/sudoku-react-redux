@@ -25,6 +25,16 @@ font-size: 40px;
     color: red;
 }
 
+.has-conflict.editable {
+    color: crimson;
+}
+
+.editable {
+    font-weight: lighter;
+    font-size: 35px;
+    color: blue
+}
+
 @media only screen and (max-width: 550px) {
     .sudokuCellHighlighted, .sudokuCell {
         max-height: 3rem;

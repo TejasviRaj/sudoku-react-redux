@@ -10,7 +10,7 @@ import rootReducer from './redux/Reducers/rootReducer';
 import { createStore } from 'redux';
 import {Provider} from 'react-redux'
 
-let store = createStore(rootReducer);
+let store = createStore(rootReducer, {board: {}});
 
 ReactDOM.render(
   <React.StrictMode>

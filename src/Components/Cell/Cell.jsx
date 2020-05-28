@@ -14,12 +14,14 @@ const Cell = (props) => {
     let highlightedIndexArray = ["01", "10", "12", "21"];
     let classes = [];
     props.cell.isUserEditable ? classes.push('editable') : classes.push('non-editable');
-    props.cell.hasConflict ? classes.push('has-conflict') : classes.push('');
+    props.cell.hasConflict ? classes.push('has-conflict') : classes.push('no-conflict');
     let isPlain = highlightedIndexArray.includes(rowColumnIndex);
     isPlain? classes.push('sudokuCell') : classes.push('sudokuCellHighlighted');
     let value = props.cell.cellValue;
     return (
+        <td>
         <input type="text" onChange={onInputChange} className = {classes.join(' ')} readOnly={!props.cell.isUserEditable} value = {value} />
+        </td>
         );
 
     function onInputChange(e) {
