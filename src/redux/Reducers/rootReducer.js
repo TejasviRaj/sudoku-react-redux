@@ -12,7 +12,7 @@ export default function rootReducer(state = initialState, action) {
             return {
                 board: BoardFactory(action.difficulty),
             };
-        case Actions.USER_INPUT:    
+        case Actions.USER_INPUT:
             let newState = Object.assign({}, state);
             console.log(action.updatedCell);
             mainLoop:

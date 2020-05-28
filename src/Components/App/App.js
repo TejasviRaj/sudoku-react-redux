@@ -17,6 +17,15 @@ function App() {
     let cell = {rowNumber: 4, columnNumber: 4, cellValue: 5};
     sta = rootReducer(sta,updateCell(cell));
     console.log(sta);
+    sta.board.rows.forEach((item) => {
+      item.cells.forEach((item) => {
+        if (item.hasConflict) {
+          console.log(item.hasConflict);
+          console.log(item.rowNumber);
+          console.log(item.columnNumber);
+        }
+      });
+    })
   },2000);
 
   return (
