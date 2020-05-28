@@ -1,22 +1,22 @@
 import Cell from '../Cell/Cell';
 import Row from '../Row/Row'
 
-export class Board {
+export default class Board {
     constructor(difficulty, initialState) {
         this.getBoardStateWithShape = this.getBoardStateWithShape.bind(this);
         this.difficulty = difficulty;
-        boardStateWithShape = initialState? this.getBoardStateWithShape(initialState)  : [];
+        this.boardStateWithShape = initialState? this.getBoardStateWithShape(initialState)  : [];
     }
 
     getBoardStateWithShape(stateWithoutShape) {
         let columnsForCurrentRow = [];
         let rows = [];
-        stateWithoutShape.forEach((value) => {
+        stateWithoutShape.forEach((value, index) => {
 
             let cell = new Cell(value === '0' ? '': value, rows.length, columnsForCurrentRow.length, cellValue === '0');
             columnsForCurrentRow.push(cell);
 
-            if (i % 9 === 8) {
+            if (index % 9 === 8) {
                 rows.push(new Row(columnsForCurrentRow))
                 columnsForCurrentRow = []
             }

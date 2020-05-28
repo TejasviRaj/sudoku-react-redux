@@ -1,4 +1,5 @@
-import difficultyArray from './difficulty'
+import difficultyArray from './difficulty';
+import Board from './Board'
 
 export default function BoardFactory(selectedDifficulty) {
     let difficulty = difficultyArray.filter(difficultyObj => difficultyObj.difficulty === selectedDifficulty)[0];
