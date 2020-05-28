@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import selectDifficulty from '../../redux/Actions/selectDifficultyCreator'
 import ROW from '../Row/Row'
 import './Sudoku.css'
+import Result from '../Result/Result'
 
 function Sudoku(props) {
     let { difficulty } = useParams();
@@ -28,9 +29,10 @@ function Sudoku(props) {
                         })
                     }
                 </tbody>
-                {/* <Result board={board}/> */}
 
             </table>
+            <Result board={board}/>
+
         </div>
     );
 }
