@@ -1,4 +1,4 @@
-class Cell {
+export default class Cell {
     constructor(cellValue, rowNumber, columnNumber, isUserEditable = false) {
         this.cellValue = cellValue;
         this.rowNumber = rowNumber;
