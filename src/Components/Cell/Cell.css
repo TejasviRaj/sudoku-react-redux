@@ -1,18 +1,37 @@
 .sudokuCellHighlighted{
-border-collapse: collapse;
 background-color: #EFEFEF;
 border: 1px dashed silver;
-height: 60px;
-width: 60px;
+height: 3.9rem;
+width: 3.9rem;
 text-align: center;
 font-size: 40px;
 }
 
 .sudokuCell {
-    border-collapse: collapse;
 border: 1px dashed silver;
-height: 60px;
-width: 60px;
+height: 3.9rem;
+width: 3.9rem;
 text-align: center;
 font-size: 40px;
+}
+
+@media only screen and (max-width: 550px) {
+    .sudokuCellHighlighted, .sudokuCell {
+        max-height: 3rem;
+        max-width: 3rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .sudokuCellHighlighted, .sudokuCell {
+        max-height: 2.5rem;
+        max-width: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .sudokuCellHighlighted, .sudokuCell {
+        max-height: 2.2rem;
+        max-width: 2.2rem;
+    }
 }

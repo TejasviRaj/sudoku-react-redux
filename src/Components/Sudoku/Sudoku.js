@@ -7,13 +7,11 @@ import './Sudoku.css'
 
 function Sudoku(props) {
     let { difficulty } = useParams();
-    const { startNewGame } = props;
-    let board = null;
+    let {startNewGame} = props;
 
     useEffect(() => {
-        props.startNewGame(difficulty);
-        board = props.board;
-    }, []);
+        startNewGame(difficulty);
+    }, [startNewGame, difficulty]);
 
 
     return (

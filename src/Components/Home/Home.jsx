@@ -11,13 +11,13 @@ function Home() {
         <div className="sudokuRow" > {
             difficultyArray.map((item) =>
             <Link to={process.env.PUBLIC_URL + '/' + item.difficulty} class="sudokuItem">
-                    <a class="sudokuLink"
-                        href="#" >
+                    <div class="sudokuLink"
+                        >
                         <div className="sudokuHover" >
                             <div className="sudokuHoverContent" > Click to play this sudoku </div> </div > <img className="imgFluid"
                                 src={`assets/${item.difficulty}.jpg`}
                                 alt="" />
-                    </a>
+                    </div>
                     <div className="sudokuCaption" >
                         <div className="sudokuCaptionHeading" > {item.difficulty} </div>
                     </div >
