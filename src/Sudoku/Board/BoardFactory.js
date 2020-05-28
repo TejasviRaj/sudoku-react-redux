@@ -1,3 +1,5 @@
+//Author- Tejasvi Raj Pant
+
 import difficultyArray from './difficulty';
 import Board from './Board'
 
@@ -11,5 +13,5 @@ export default function BoardFactory(selectedDifficulty) {
 function getRandomInitialState(initalStateChoices) {
     let upperLimit = initalStateChoices.length -1;
     let lowerLimit = 0;
-    return Math.floor(Math.random() * (upperLimit - lowerLimit + 1)) + lowerLimit;
+    return initalStateChoices[Math.floor(Math.random() * (upperLimit - lowerLimit + 1)) + lowerLimit];
 }
