@@ -1,5 +1,13 @@
 .sudokuCellHighlighted{
 background-color: #EFEFEF;
+border: 0.1px dashed silver;
+height: 3.9rem;
+width: 3.9rem;
+text-align: center;
+font-size: 40px;
+}
+
+.sudokuCell{
 border: 1px dashed silver;
 height: 3.9rem;
 width: 3.9rem;
@@ -7,12 +15,14 @@ text-align: center;
 font-size: 40px;
 }
 
-.sudokuCell {
-border: 1px dashed silver;
-height: 3.9rem;
-width: 3.9rem;
-text-align: center;
-font-size: 40px;
+
+
+.non-editable {
+    font-weight: bold;
+}
+
+.has-conflict {
+    color: red;
 }
 
 @media only screen and (max-width: 550px) {

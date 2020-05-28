@@ -4,9 +4,9 @@ import Cell from '../Cell/Cell'
 const Row = (props) =>
 {
   
-    return <tr>
+    return (<tr>
         {props.row.cells.map((cell,cellNum) =>
              <Cell key={cellNum} cell = {cell}></Cell>)}
-    </tr>
+    </tr>)
 }
 export default Row;

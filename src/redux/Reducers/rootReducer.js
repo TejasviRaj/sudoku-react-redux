@@ -14,6 +14,8 @@ export default function rootReducer(state = initialState, action) {
             };
         case Actions.USER_INPUT:
             let newState = Object.assign({}, state);
+                        console.log(newState === state);
+
             mainLoop:
             for (let row of newState.board.rows) {
                 for (let cell of row.cells) {
@@ -25,6 +27,8 @@ export default function rootReducer(state = initialState, action) {
                 }
             }
             checkForConflicts(newState.board);
+            console.log("newstate");
+            console.log(newState);
             return newState;
         default:
             return state;

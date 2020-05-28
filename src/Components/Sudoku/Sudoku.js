@@ -13,10 +13,13 @@ function Sudoku(props) {
         startNewGame(difficulty);
     }, [startNewGame, difficulty]);
 
+    useEffect(() => {
+        console.log('hello');
+    });
 
     return (
         <div>
-            <table class="sudokuGrid">
+            <table className="sudokuGrid">
                 <tbody>
                     {Object.keys(props.board).length &&
                         props.board.rows.map((row, rowNum) => {
