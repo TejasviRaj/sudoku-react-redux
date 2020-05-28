@@ -1,21 +1,7 @@
 import React from 'react'
 import './Home.css'
 import {Link} from 'react-router-dom'
-
-
-let difficultyArray = [
-    
-    {
-        difficulty: "EASY"
-    },
-    {
-        difficulty: "MEDIUM"
-    },
-    {
-        difficulty: "HARD"
-    },
-    
-];
+import difficultyArray from '../../Sudoku/Board/difficulty';
 
 function Home() {
     return (
